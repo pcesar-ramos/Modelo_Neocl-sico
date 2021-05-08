@@ -1,0 +1,176 @@
+% --------------------------------------------------------------------
+% LaTeX beamer slide example for Leiden slides
+% Copyright LaTeX template: 2009-2010 by Joost Schalken
+% --------------------------------------------------------------------
+
+% ====================================================================
+% Setup of slide environment
+\batchmode % Do not display issues with package loading
+\documentclass[t,11pt]{beamer}
+
+% --------------------------------------------------------------------
+% Load packages
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{calc,trees,positioning,arrows,chains,shapes.geometric,%
+    decorations.pathreplacing,decorations.pathmorphing,shapes,%
+    matrix,shapes.symbols}
+\usepackage{listings}
+\lstset{tabsize=2,showspaces=false,showtabs=false,basicstyle=\ttfamily\mdseries\itshape\normalsize}
+
+% --------------------------------------------------------------------
+% Beamer version theme settings
+\usetheme[
+    faculty=sciences,  % humanities, law, medicine, sciences, socialsciences
+    lang=en,           % en, nl
+    rmfont=pmn,
+    logofont=fpi,
+    %totalpages=off    % Disable total number of slides
+]{leiden}
+%\usetheme[faculty=sciences,lang=en]{leiden}
+
+% Remove navigation symbols
+\setbeamertemplate{navigation symbols}{}
+
+% Better default font
+\usepackage{iwona}
+\usepackage[textfont={scriptsize,it}]{caption}
+\setbeamerfont{caption}{size=\scriptsize}
+\renewcommand*{\familydefault}{\sfdefault}
+
+
+
+
+% --------------------------------------------------------------------
+\def\liketitle#1{%
+{\usebeamerfont{frametitle}\usebeamercolor[fg]{frametitle}%
+\begin{flushleft}%
+\vspace{-\baselineskip}% Cometic correction for space introduced by flushleft
+#1\par
+\end{flushleft}%
+\vspace{-\baselineskip}% Cosmetic correction for space introduced by flushleft
+}%
+\vspace{0.75\baselineskip}%
+}
+
+% --------------------------------------------------------------------
+\setbeameroption{hide notes}
+%\setbeameroption{show notes}
+%\setbeameroption{show notes on second screen}
+
+% --------------------------------------------------------------------
+\nonstopmode % Include issues with the slides
+
+
+% ====================================================================
+% Header settings
+\def\lecturename{Lecture}
+\lecture[Leiden Template]{Macroeconomía}{ldn-bmr}
+\subtitle{Crecimiento Económico}
+\date{December 9th, 2010}
+\title{\insertlecture}
+\author{Macroeconomía}
+\institute{2020}
+\subject{Lecture: \lecturename}
+
+
+% ====================================================================
+% Main part
+
+% --------------------------------------------------------------------
+\batchmode % Do not include issues with the package definitions
+\begin{document}
+\nonstopmode % Include issues with the slides
+
+
+% ====================================================================
+\section*{Introduction}
+
+% --------------------------------------------------------------------
+
+\setbeamertemplate{navigation symbols}{}
+\begin{frame}[plain]
+  \maketitle
+\end{frame}
+\addtocounter{framenumber}{-1}% don't count the title slide.
+
+
+\begin{frame}{Introducción}
+Teoría del Crecimiento: Modelo Neoclásico. 
+Modelo de Sollow \& Swan (1956)
+\begin{itemize}
+    \item Fase de crecimiento - estructura de la sociedad.
+    \item Factores que explican el crecimiento de largo plazo.
+\end{itemize}
+La modelizacion del crecimiento inicia a finales de la decada de 1930. Los primeros trabajos: Harrod (1939) y Domar (1946). 
+\medskip 
+
+En 1956 Solow \& Swan elaboraron el modelo basico de una economia dinamica (funcion de produccion Neoclasica con Rendimientos Constantes a escala R.C.E. Y Rendimientos decreciente de los factores). 
+\end{frame}
+
+%--------------------------------------------%
+%--------------------------------------------%
+\section{}
+%--------------------------------------------%
+%--------------------------------------------%
+
+ \begin{frame}{Introduccion}
+ En 1965 Cass \& Koopmans a partir del modelo elaborado por Ramsey (1928) completaron la teoria Neoclasica con el supuesto de que los consumidores son optimizadores racionales.
+ \medskip
+ 
+ En la segunda mitad de los ochenta, con los trabajos pioners de Romer (1986), Lucas (1988) \& Rebelo (1991). Introdujeron del progreso tecnologico
+ 
+ \end{frame}
+%--------------------------------------------%
+%--------------------------------------------%
+\begin{frame}{Sollow 1956}
+\begin{itemize}
+    \item Equilibrio ahorro - inversion
+    \item Vaciado de mercados
+    \item funcion de produccion lineal y homogenea en logaritmos
+    \item Sustituibilidad de capital y trabajo
+    \item Relacion ahorro/renta es constante
+\end{itemize}
+    
+\end{frame}
+%--------------------------------------------%
+%--------------------------------------------%
+
+%============================================%
+%============================================%
+\section{Ejemplos}
+
+%--------------------------------------------%
+%--------------------------------------------%
+\begin{frame}{Ejemplo}
+Dada una ecuación lineal aplicamos el algoritmo de Newton y el valor inicial es $x=4$, entonces:
+$$F(x)=x-2$$
+La solución que satisface $F(x)=0$ es para $x=2$ en este ejemplo apliquemos el algortmo se tiene:
+$$x_1 = x_0 - \frac{F(x_0)}{F'(x)}=4-\frac{4-2}{1}=2$$
+Para comprobar $F(x_1)=0$ reemplazamos la solucion $x_1$:
+$$F(x_1)=0 \rightarrow F(x_1)=2-2=0$$
+\end{frame}
+%--------------------------------------------%
+%--------------------------------------------%
+\begin{frame}{Frame Title}
+    
+\end{frame}
+%--------------------------------------------%
+%--------------------------------------------%
+ 
+% ====================================================================
+\section{Final}
+
+
+% --------------------------------------------------------------------
+\begin{frame}{Final presentación}
+\vfill % Vertical centering
+\begin{center}
+\alert{\large Crecimiento Económico}\\
+{\LARGE Macroeconomía}\\
+{\tiny 2020}
+\end{center}
+\end{frame}
+
+\end{document}
